@@ -1,0 +1,35 @@
+<div class="card d-flex col-6 m-5 p-3 shadow-sm">
+  <div class="d-flex align-items-center justify-content-between">
+    <h1 style="margin-left: 8px"><%= @task.title %></h1>
+    <%= link_to edit_task_path do %>
+      <div style="color: white" class="btn btn-primary ml-5">
+        Edit the task
+      </div>
+    <% end %>
+  </div>
+  
+  <div class="alert alert-dark mt-4 mb-5">
+    <%= @task.details %>
+  </div>
+
+
+  <% if @task.completed %>
+  <div class="d-flex align-items-center">
+    <i class="far fa-check-square mr-3"></i>
+    <p style="margin: 0">This task is completed</p>
+  </div>
+  <% else %>
+  <div class="d-flex align-items-center">
+    <i class="far fa-square mr-3"></i>
+    <p style="margin: 0">This task is not completed yet!</p>
+  </div>
+  <% end %>
+</div>
+
+
+<%= link_to tasks_path do %>
+  <div style="color: white" class="btn btn-primary ml-5">
+    Back to list
+  </div>
+<% end %>
+

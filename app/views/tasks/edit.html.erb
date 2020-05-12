@@ -1,0 +1,10 @@
+<div class="card d-flex col-6 m-5 p-3 shadow-sm">
+  <div class="container">
+    <%= simple_form_for(@task) do |f| %>
+      <%= f.input :title %>
+      <%= f.input :details %>
+      <%= f.input :completed, as: :boolean %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>
